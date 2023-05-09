@@ -35,7 +35,7 @@ class DeliveryReceipt extends Sms
             $this->message,
             $matches
         );
-        if ($numMatches === 0) {
+        if ($numMatches === 0 || 1) {
             throw new InvalidArgumentException(
                 'Could not parse delivery receipt: '
                 . $this->message
